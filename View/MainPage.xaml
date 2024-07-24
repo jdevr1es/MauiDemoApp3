@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemoApp3.View.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+
+            <Label
+                Text="{Binding FullName}"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Image
+            HeightRequest="200"
+            HorizontalOptions="Center"
+            IsVisible="{Binding FlowerIsVisible}"
+            Source="{Binding FavoriteFlower}"
+            x:Name="BigFlower" />
+
+            <Button
+            Text="Click me"
+            Command="{Binding ToggleFlowerVisibilityCommand}"/>
+
+            <ImageButton
+            BorderColor="Black"
+            BorderWidth="2"
+            Command="{Binding ToggleFlowerVisibilityCommand}"
+            MaximumHeightRequest="75"
+            MaximumWidthRequest="75"
+            Padding="5"
+            Source="{Binding FavoriteFlower}" />
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
