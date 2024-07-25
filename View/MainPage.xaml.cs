@@ -26,20 +26,7 @@ namespace MauiDemoApp3.View
 
         }
 
-        int count = 0;
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            foreach (var item in vm.StudentList)
-
-                item.IsRegistered = true;
-        }
+        
     }
 
 }

@@ -67,15 +67,8 @@
             </CollectionView>
 
             <Button
-            Text="Register VM"
+            Text="Register"
             Command="{Binding UpdateRegistrationsCommand}"/>
-
-            <Button
-            x:Name="CounterBtn"
-            Text="Register Code-Behind"
-            Clicked="Button_Clicked"/>
-
-
 
         </VerticalStackLayout>
     </ScrollView>
