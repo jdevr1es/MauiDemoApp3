@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiDemoApp3"
+             xmlns:model="clr-namespace:MauiDemoApp3.Model"
              x:Class="MauiDemoApp3.View.MainPage">
 
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            
+
 
             <Label
                 Text="{Binding FullName}"
@@ -33,6 +35,27 @@
             MaximumWidthRequest="75"
             Padding="5"
             Source="{Binding FavoriteFlower}" />
+
+            <CollectionView
+             Grid.Row="0"
+             ItemsSource="{Binding StudentList}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate
+                     x:DataType="model:Student">
+                        <Grid
+                        ColumnDefinitions="*,30">
+                            <Label
+                             Grid.Column="0"
+                             Text="{Binding Name}" />
+                            <Image
+                             Grid.Column="1"
+                             Source="checkmark.png"
+                             IsVisible="{Binding IsRegistered}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
 
 
 

@@ -1,4 +1,5 @@
 ﻿using MauiDemoApp3.ViewModel;
+using MauiDemoApp3.Model;
 
 namespace MauiDemoApp3.View
 {
@@ -18,7 +19,7 @@ namespace MauiDemoApp3.View
         {
             base.OnAppearing();
             vm.FullName = "John DeVries";
-            vm.FavoriteFlower = "pic_trulli.jpg";
+            
 
         }
 
