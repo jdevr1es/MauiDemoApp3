@@ -23,9 +23,7 @@
             Source="{Binding FavoriteFlower}"
             x:Name="BigFlower" />
 
-            <Button
-            Text="Click me"
-            Command="{Binding ToggleFlowerVisibilityCommand}"/>
+
 
             <ImageButton
             BorderColor="Black"
@@ -42,20 +40,40 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate
                      x:DataType="model:Student">
-                        <Grid
-                        ColumnDefinitions="*,30">
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
                             <Label
                              Grid.Column="0"
-                             Text="{Binding Name}" />
+                             Text="{Binding Name}"
+                             FontAttributes="Bold"/>
                             <Image
+                             Grid.RowSpan="2"
                              Grid.Column="1"
                              Source="checkmark.png"
-                             IsVisible="{Binding IsRegistered}" />
+                             IsVisible="{Binding IsRegistered}"
+                             Aspect="AspectFill"
+                             HeightRequest="25"
+                             WidthRequest="25"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
+            <Button
+            Text="Register VM"
+            Command="{Binding UpdateRegistrationsCommand}"/>
+
+            <Button
+            x:Name="CounterBtn"
+            Text="Register Code-Behind"
+            Clicked="Button_Clicked"/>
 
 
 

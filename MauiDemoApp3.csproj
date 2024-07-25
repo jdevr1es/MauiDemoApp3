@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\checkmark.png" />
 	  <None Remove="Resources\Images\OIP.jpg" />
 	  <None Remove="Resources\Images\pic_trulli.jpg" />
 	</ItemGroup>

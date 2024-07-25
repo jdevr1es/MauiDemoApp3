@@ -46,10 +46,11 @@ namespace MauiDemoApp3.ViewModel
             FlowerIsVisible = !FlowerIsVisible;
         }
 
-        public ObservableCollection<Student> StudentList { get; } = new();
+        
+        public ObservableCollection<Student> StudentList { get; set; } = new();
 
         [RelayCommand]
-        void UpdateRegistrations()
+        private void UpdateRegistrations()
         {
             foreach (var item in StudentList)
                 item.IsRegistered = true;
