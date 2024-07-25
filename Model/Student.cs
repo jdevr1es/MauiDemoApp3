@@ -14,7 +14,8 @@ namespace MauiDemoApp3.Model
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        [ObservableProperty]
+        public string name;
 
         [ObservableProperty]
         public bool isRegistered;
