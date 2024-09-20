@@ -12,11 +12,11 @@
 
 
             <Label
-                Text="{Binding FullName}"
+                Text="List of Students"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <Image
+            <!--<Image
             HeightRequest="200"
             HorizontalOptions="Center"
             IsVisible="{Binding FlowerIsVisible}"
@@ -32,11 +32,17 @@
             MaximumHeightRequest="75"
             MaximumWidthRequest="75"
             Padding="5"
-            Source="{Binding FavoriteFlower}" />
+            Source="{Binding FavoriteFlower}" />-->
+
+            
+            
 
             <CollectionView
              Grid.Row="0"
-             ItemsSource="{Binding StudentList}">
+             ItemsSource="{Binding StudentList}"
+             SelectionMode="Single"
+             SelectedItem="{Binding SelectedData}"
+             SelectionChangedCommand="{Binding SelectionChangedCommand}" >
                 <CollectionView.ItemTemplate>
                     <DataTemplate
                      x:DataType="model:Student">
@@ -66,9 +72,9 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <Button
+            <!--<Button
             Text="Register"
-            Command="{Binding UpdateRegistrationsCommand}"/>
+            Command="{Binding UpdateRegistrationsCommand}"/>-->
 
         </VerticalStackLayout>
     </ScrollView>

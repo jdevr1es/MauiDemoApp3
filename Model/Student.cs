@@ -12,7 +12,7 @@ namespace MauiDemoApp3.Model
     [ObservableObject]
     public partial class Student
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         [ObservableProperty]
         public string name;
